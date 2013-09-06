@@ -1,0 +1,26 @@
+I, as the developer, want to easily bootstrap a django project.
+
+Problem: When starting a new project, the very first 2 days of work
+are spent on common tasks, such as:
+
+* taking a h5bp template
+* integrating bootstrap
+* django_compile integration: bootstrap's less file and the application's
+    main less file need to be compiled
+
+When such a template exists, it is executed with the project name as argument
+to start a project.
+
+At some later stage in the project, a django web app will be built on top of
+this library, allowing others to submit via github their forks (with parameters).
+
+    These parameres will be availible to the webapp user to choose from (and save)
+
+    ####
+    The above noch ein mal:
+        ***jsut write it in code already***
+
+
+Start a site with a simple bootstrap template.
+OpenShift provisioning via fab command
+        
