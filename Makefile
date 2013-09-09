@@ -1,2 +1,2 @@
 all:
-	py.test test.py -x -s
+	python run.py

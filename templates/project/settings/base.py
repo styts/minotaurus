@@ -107,7 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
@@ -128,7 +128,7 @@ INSTALLED_APPS = (
 
     'django_extensions',
 
-    '{{ project_name }}.main',
+    'main',  # newly created app from template
 
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
