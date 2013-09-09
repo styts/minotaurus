@@ -21,7 +21,7 @@ def test_0_newproject():
     local(ln_cmd)
 
     # test that index page loads
-    local('py.test %s/tests.py' % project_name)
+    local('py.test %s/tests.py -x -s' % project_name)
 
     # * get http index
     # * check request content
@@ -30,4 +30,4 @@ def test_0_newproject():
     #assert "bootstrap.less" in content
 
     # this comes at the end
-    local('rm -rf ' + project_name)
+    #local('rm -rf ' + project_name)
