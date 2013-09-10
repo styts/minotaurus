@@ -1,4 +1,5 @@
 {% load main %}
+{% load compress %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,16 +11,20 @@
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        {% compress css %}
         <link rel="stylesheet" href="{{STATIC_URL}}css/normalize.css">
         <link rel="stylesheet" href="{{STATIC_URL}}css/main.css">
-        <script src="{{STATIC_URL}}js/vendor/modernizr-2.6.2.min.js"></script>
+        {% endcompress %}
     </head>
     <body class="{% settings_value "BODY_CLASS" %}">
         {% block content %}{% endblock %}
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        {% compress js %}
+        <script src="{{STATIC_URL}}js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="{{STATIC_URL}}js/vendor/jquery-1.9.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="{{STATIC_URL}}js/plugins.js"></script>
         <script src="{{STATIC_URL}}js/main.js"></script>
+        {% endcompress %}
     </body>
 </html>
