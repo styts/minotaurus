@@ -2,7 +2,7 @@ import os
 
 # set PROJECT_PATH to the directory where manage.py resides.
 PROJECT_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
+    os.path.join(os.path.dirname(__file__), os.pardir))
 
 # used to color the top border in staging environment
 BODY_CLASS = ""
@@ -110,7 +110,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates"
@@ -120,18 +120,14 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'django_extensions',
-
     'main',  # newly created app from template
-
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
 )
 
 # A sample logging configuration. The only tangible logging
