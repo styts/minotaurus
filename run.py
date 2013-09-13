@@ -35,8 +35,12 @@ def main():
 
     local('dropdb %s' % project_name)
 
+    # see that fab also works
+    local('cd %(p)s; fab hello' % {"p": project_name})
+
     # this comes at the end
     #local('rm -rf ' + project_name)
+
 
 if __name__ == '__main__':
     main()
